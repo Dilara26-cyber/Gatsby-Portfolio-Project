@@ -16,12 +16,10 @@ const About = () => {
           exciting flavors we are scooping this week!
         </p>
       </div>
-      <StaticImage
+      <img
         className="about__img"
         src="https://images.getbento.com/accounts/e25c1d072e1a95f6401248625dd0a650/media/images/98755DEFT_UNION_Dasher_and_Crank_042-HDR-Edit_FULL-RES-1.jpg?fit=max&w=1800&auto=format,compress"
         alt="Tables and lamps inside of the shop."
-        placeholder="tracedSVG"
-        layout="fullWidth"
       />
     </section>
   )
