@@ -1,0 +1,48 @@
+#about {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #08b6a9;
+  color: white;
+  text-align: center;
+  align-items: center;
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 900;
+  }
+}
+.about__content {
+  width: 100%;
+  line-height: 1.8;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  p {
+    max-width: 500px;
+  }
+}
+.about__content h2::after {
+  content: "";
+  background-image: url(https://images.getbento.com/accounts/e25c1d072e1a95f6401248625dd0a650/media/images/17312deco-line2.png?w=1800&fit=max&auto=compress,format&h=1800);
+  width: 200px;
+  height: 50px;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.about__img {
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 1024px) {
+  #about {
+    flex-direction: row;
+  }
+  .about__content {
+    padding: 0 1.625em;
+  }
+}

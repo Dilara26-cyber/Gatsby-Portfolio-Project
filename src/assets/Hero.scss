@@ -1,0 +1,134 @@
+.image__slider {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+
+.slide {
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+.hero__logo {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  text-align: center;
+  width: 45%;
+  max-width: 350px;
+  h1 {
+    font-size: 1.5rem;
+    order: 2;
+    color: white;
+    font-weight: 400;
+    letter-spacing: 1px;
+  }
+}
+.hero__btn {
+  position: absolute;
+  top: 50%;
+  width: 2em;
+  height: 2em;
+  color: white;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.hero__btn.prev {
+  transition: transform 0.3s ease-in-out;
+  left: 5%;
+}
+.next:hover,
+.prev:hover {
+  transform: scale(1.1);
+}
+.hero__btn.next {
+  transition: transform 0.3s ease-in-out;
+  right: 5%;
+}
+.hero__info {
+  display: none;
+}
+.welcome__section {
+  min-height: 250px;
+  display: flex;
+  text-align: center;
+  color: #08b6a9;
+  font-weight: 900;
+  font-size: 1.2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .welcome__section {
+    font-size: 1.7rem;
+  }
+  .hero__info {
+    position: absolute;
+    width: 100%;
+    min-height: 5%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #fcd8db;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 1.625em;
+    color: #08b6a9;
+    a {
+      color: #08b6a9;
+      text-transform: uppercase;
+      font-weight: 800;
+      letter-spacing: 0.8;
+      transition: color 0.3s ease-in-out;
+    }
+  }
+  .info {
+    display: flex;
+    gap: 2em;
+  }
+
+  .hero__icon {
+    margin-left: 1em;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+  }
+
+  .hero__info a:hover,
+  .hero__icon:hover {
+    color: #686c62;
+  }
+  .hero__logo {
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
+}
+@media (min-width: 1600px) {
+  .hero__info {
+    padding: 1em 17em;
+  }
+}

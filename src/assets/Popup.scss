@@ -1,0 +1,18 @@
+.leaflet-popup-content-wrapper {
+  background: transparent !important;
+  box-shadow: rgba(0, 0, 0, 0) 0px 3px 14px !important;
+  pointer-events: none;
+}
+.leaflet-popup-tip-container,
+a.leaflet-popup-close-button {
+  display: none !important;
+  pointer-events: none;
+}
+.popup {
+  height: 150px;
+  width: 150px;
+  background-image: url(./ice-cream.svg);
+  background-position: center;
+  background-size: 100%;
+  pointer-events: none;
+}

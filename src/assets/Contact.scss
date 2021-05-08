@@ -1,0 +1,26 @@
+#contact {
+  background-color: #fcd8db;
+  margin-bottom: 0;
+  line-height: 1.5;
+  font-weight: 500;
+  h1 {
+    margin-top: 1.5em;
+  }
+  form {
+    margin-bottom: 3em;
+  }
+}
+.input__container {
+  width: 100%;
+}
+.message {
+  height: 10em;
+}
+@media (min-width: 1024px) {
+  #contact {
+    height: 100vh;
+  }
+  .input__container {
+    width: 60%;
+  }
+}

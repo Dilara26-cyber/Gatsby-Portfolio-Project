@@ -1,0 +1,62 @@
+.store {
+  margin-bottom: 5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 900;
+  color: #686c5e;
+  h1 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 3rem;
+  }
+  h1::after {
+    content: "";
+    background-image: url(https://images.getbento.com/accounts/e25c1d072e1a95f6401248625dd0a650/media/images/91398deco-line.png?w=1800&fit=max&auto=compress,format&h=1800);
+    width: 200px;
+    height: 50px;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0 auto;
+  }
+}
+
+.product {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1em;
+  &__img img:hover {
+    transition: transform 0.3s ease;
+    transform: scale(1.1);
+  }
+}
+.product__img {
+  width: 300px !important;
+  height: 210px !important;
+}
+.gatsby-image-wrapper [data-main-image] {
+  transition: transform 0.3s ease !important;
+}
+.product__details {
+  margin-top: 1em;
+  p {
+    margin-top: 0.5em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .product {
+    flex-direction: row;
+    align-items: center;
+    gap: 3em;
+  }
+  .product__img {
+    width: 400px !important;
+    height: 317px !important;
+  }
+}

@@ -1,0 +1,214 @@
+//Hamburger Menu and Animation
+.menu__btn {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  z-index: 5;
+  &__line {
+    width: 25px;
+    height: 4px;
+    background-color: #08b6a9;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+  }
+}
+.menu__btn:hover {
+  .menu__btn__line,
+  .menu__btn__line::before,
+  .menu__btn__line::after {
+    background-color: #686c62;
+  }
+}
+.menu__btn__line::before,
+.menu__btn__line::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 4px;
+  background-color: #08b6a9;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu__btn__line::before {
+  transform: translateY(-10px);
+}
+.menu__btn__line::after {
+  transform: translateY(10px);
+}
+.menu__btn.open .menu__btn__line {
+  transform: translateX(-50px);
+  background: transparent;
+}
+.menu__btn.open .menu__btn__line::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+.menu__btn.open .menu__btn__line::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+}
+.logo__nav {
+  display: none;
+}
+
+.nav.active {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fcd8db;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 4;
+}
+.nav__link {
+  font-size: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #08b6a9;
+  transition: color 0.3s ease-in-out;
+}
+.nav {
+  display: none;
+}
+.wavy-bg {
+  margin-top: 1em;
+  width: 200%;
+  height: 10%;
+  background-image: url(./90105deco-line-lg.webp);
+  background-size: contain;
+  background-repeat: repeat-x;
+}
+.information {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.nav__icons {
+  color: #08b6a9;
+  font-size: 1.3rem;
+  margin: 1em;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+.location-information {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+  text-align: center;
+  a {
+    cursor: pointer;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #08b6a9;
+    font-size: 0.8rem;
+    transition: color 0.3s ease-in-out;
+  }
+}
+
+.logo {
+  display: none;
+}
+// Hover
+.nav__link:hover,
+.nav__icons:hover,
+.location-information a:hover {
+  color: #686c62;
+}
+@media (min-width: 720px) {
+  .menu__btn {
+    margin-right: 1.625em;
+    position: fixed;
+    top: 6%;
+  }
+
+  .menu__btn__line,
+  .menu__btn__line::after,
+  .menu__btn__line::before {
+    background-color: white;
+  }
+  .second__nav {
+    width: 100%;
+    height: 115px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    transform: translateY(-500px);
+    z-index: 4;
+    transition: transform 0.3s ease-in;
+  }
+  .second__nav.active {
+    background-image: linear-gradient(
+      to bottom,
+      #08b6a9 25%,
+      rgba(247, 202, 203, 0.9) 97%
+    );
+    transform: translateY(0);
+  }
+  .logo {
+    display: block;
+    width: 120px;
+    position: absolute;
+    left: 0;
+    margin-left: 1.625em;
+    bottom: 0;
+    img {
+      width: 100%;
+    }
+  }
+  .second__nav.active::after {
+    content: "";
+    background-image: url(https://images.getbento.com/accounts/e25c1d072e1a95f6401248625dd0a650/media/images/51941nav-bg03.png?w=1800&fit=max&auto=compress,format&h=1800);
+    width: 100%;
+    height: 105px;
+    background-size: contain;
+    background-repeat: repeat-x;
+    transform: translateY(110px);
+  }
+  .nav__link {
+    font-size: 1.5rem;
+  }
+  .wavy-bg {
+    margin-top: 2em;
+  }
+  .nav__icons {
+    font-size: 2rem;
+    margin: 1em;
+  }
+  .location-information {
+    gap: 1em;
+    a {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+  .menu__btn {
+    margin-right: 17em;
+  }
+  .logo {
+    margin-left: 17em;
+  }
+}

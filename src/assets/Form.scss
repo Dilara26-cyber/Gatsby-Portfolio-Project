@@ -1,0 +1,88 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #fcd8db;
+  text-align: center;
+  padding: 1em;
+  button {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0.5em 2em;
+    max-width: 200px;
+    background-color: #08b6a9;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    border: none;
+    margin-top: 3em;
+  }
+  button:hover {
+    background-color: #686c5e;
+  }
+  h1 {
+    color: #686c5e;
+    font-size: 1.75rem;
+    margin-top: 3rem;
+    font-weight: 900;
+  }
+  form {
+    width: 100%;
+  }
+  input,
+  select {
+    padding: 0.75rem;
+    border: 1px solid #000;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    cursor: pointer;
+  }
+  label {
+    position: absolute;
+    font-size: 0.8rem;
+    opacity: 0;
+    top: 0;
+  }
+  label:nth-child(1) {
+    margin-right: 150px;
+  }
+  label:nth-child(3) {
+    margin-left: 150px;
+  }
+}
+
+.input__container,
+.email,
+.text {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+textarea {
+  width: 100%;
+  resize: vertical;
+}
+
+@media (min-width: 1024px) {
+  .input__container,
+  .email,
+  .text {
+    flex-direction: row;
+    width: 60%;
+    margin: 0 auto;
+    gap: 2em;
+  }
+  .form {
+    h1 {
+      font-size: 3.5rem;
+      max-width: 800px;
+      margin-top: 6rem;
+    }
+  }
+}

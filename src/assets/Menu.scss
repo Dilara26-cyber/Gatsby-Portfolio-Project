@@ -1,0 +1,76 @@
+.menu,
+.menu__item,
+.explanation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding: 1em;
+  line-height: 1.5;
+  font-weight: 600;
+  p {
+    max-width: 800px;
+    color: #686c5a;
+  }
+}
+
+.menu__heading {
+  color: #686c5e;
+  font-weight: 900;
+  font-size: 2.5rem;
+}
+.menu__content p {
+  font-size: 1.1rem;
+}
+
+.menu__item__heading {
+  color: #08b6a9;
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+}
+.menu__heading::after {
+  content: "";
+  background-image: url(https://images.getbento.com/accounts/e25c1d072e1a95f6401248625dd0a650/media/images/91398deco-line.png?w=1800&fit=max&auto=compress,format&h=1800);
+  width: 200px;
+  height: 50px;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0 auto;
+}
+.explanation {
+  gap: 0.5em;
+}
+hr {
+  width: 200%;
+  opacity: 0.7;
+}
+@media (min-width: 1024px) {
+  .big__screen__seperator {
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    margin-top: 3rem;
+    padding: 1.625em;
+    gap: 1em;
+    justify-content: space-between;
+  }
+  .menu__item {
+    width: 40%;
+  }
+  .explanation {
+    gap: 2em;
+    hr {
+      width: 400%;
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+  .menu {
+    padding: 2em 17em;
+  }
+}
