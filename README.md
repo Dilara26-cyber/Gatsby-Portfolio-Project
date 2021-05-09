@@ -1,1 +1,6 @@
-Gatsby JS öğrenmeye başlar başlamaz öğrendiklerimi pratik uygulamayla sağlamlaştırmak istedim. Kendime Gatsby'nin sağladığı avantajları test edebileceğim ve CSS ile de beni zorlayabilecek bir site seçtim. Dasher & Crank harika bir websitesine sahip olan bir dondurmacı. Onların websitesinden yola çıkarak bu projemde Gatsby JS, GraphQL, Contentful ile çalıştım. Aynı zamanda sitede iki ürünlü ufak bir mağaza bölümünün bulunmasıyla birlikte küçük bir e-commerce çalışması da yapmış oldum. 
+Website for a business and a small e-commerce functionality created with Gatsby JS. 
+I used Contentful for the data.
+Please visit the site for actual experience.
+
+Site URL: https://copy-of-dasher-and-crank.netlify.app/
+Video URL: https://youtu.be/gS7y_26Rkfo
